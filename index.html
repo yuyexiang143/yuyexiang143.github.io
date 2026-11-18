@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人开发者 · Python 自动化与数据处理</title>
+<meta name="description" content="Python 自动化脚本、数据清洗、批量文件处理、报表看板。三个开源项目可直接查看源码与运行效果。">
+<style>
+  :root{
+    --bg:#0f1115;
+    --panel:#171a21;
+    --panel-2:#1d2129;
+    --line:#2a2f3a;
+    --text:#e6e9ef;
+    --muted:#9aa3b2;
+    --accent:#4ade80;
+    --accent-dim:#22c55e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{padding:96px 0 64px;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    display:inline-block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);border:1px solid rgba(74,222,128,.3);border-radius:999px;
+    padding:4px 12px;margin-bottom:24px;
+  }
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.25;font-weight:700;letter-spacing:-.02em}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{margin-top:20px;font-size:17px;color:var(--muted);max-width:640px}
+
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:32px}
+
+  .projects{display:grid;gap:20px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:28px;transition:border-color .2s,transform .2s;
+  }
+  .card:hover{border-color:rgba(74,222,128,.4);transform:translateY(-2px)}
+  .card h3{font-size:20px;margin-bottom:6px;font-weight:650}
+  .card .repo{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13px;color:var(--accent);margin-bottom:16px;display:block;
+  }
+  .card p{color:var(--muted);font-size:15px;margin-bottom:18px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .tag{
+    font-size:12px;color:#c7cedb;background:var(--panel-2);
+    border:1px solid var(--line);border-radius:6px;padding:3px 9px;
+  }
+  .facts{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:14px}
+  .facts b{color:var(--text);font-weight:600}
+
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .svc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .svc h4{font-size:16px;margin-bottom:8px}
+  .svc p{font-size:14px;color:var(--muted)}
+  .svc .price{display:block;margin-top:12px;font-size:13px;color:var(--accent)}
+
+  .note{
+    background:var(--panel);border-left:3px solid var(--accent);border-radius:8px;
+    padding:18px 22px;color:var(--muted);font-size:14px;margin-top:24px;
+  }
+  .note b{color:var(--text)}
+
+  footer{padding:56px 0 80px}
+  .contact{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+  .btn{
+    display:inline-block;padding:11px 22px;border-radius:9px;font-size:14px;font-weight:600;
+    background:var(--accent);color:#0b1a10;border:1px solid var(--accent);
+  }
+  .btn:hover{text-decoration:none;background:var(--accent-dim)}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--muted)}
+  .fineprint{margin-top:40px;font-size:13px;color:#6b7280}
+
+  @media(max-width:640px){
+    header{padding:64px 0 44px}
+    section{padding:52px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="eyebrow">个人开发者 · 接单中</span>
+    <h1>把重复劳动，<br>变成<em>一条命令</em>。</h1>
+    <p class="lede">
+      Python 自动化脚本、数据清洗、批量文件处理、报表与看板生成。
+      下面三个项目都是完整开源的真实项目，可以直接克隆下来跑，也可以先看效果再谈。
+    </p>
+    <div class="contact">
+      <a class="btn" href="https://github.com/yuyexiang143" target="_blank" rel="noopener">GitHub 主页</a>
+      <a class="btn ghost" href="#projects">查看项目</a>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>作品</h2>
+    <div class="projects">
+
+      <article class="card">
+        <h3>数据清洗与报表自动化</h3>
+        <a class="repo" href="https://github.com/yuyexiang143/datatoolkit" target="_blank" rel="noopener">yuyexiang143 / datatoolkit</a>
+        <p>
+          把「每月手工整理这几张表」变成一条命令。读取 xlsx / xls / csv，统一日期格式、
+          清洗带 ¥ 和千分位的金额、去重、处理空值、合并多个分区文件，最后输出带汇总和异常清单的 Excel 报表。
+          原始文件全程只读，不会被覆盖。
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">pandas</span>
+          <span class="tag">openpyxl</span>
+          <span class="tag">CLI</span>
+          <span class="tag">tkinter</span>
+        </div>
+        <div class="facts">
+          <span><b>14</b> 个测试通过</span>
+          <span>支持 <b>GBK</b> 编码 CSV 自动识别</span>
+          <span>命令行 + 图形界面</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>批量文件处理工具</h3>
+        <a class="repo" href="https://github.com/yuyexiang143/file-toolkit" target="_blank" rel="noopener">yuyexiang143 / file-toolkit</a>
+        <p>
+          几百个文件要改名、按日期归档、转格式、查重复？这个工具一次搞定。
+          它默认只做<strong>预演</strong>，把「旧名 → 新名」全部列给你看，确认后才真正执行；
+          每次执行都留一份回滚清单，改错了能一条命令撤销。
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Pillow</span>
+          <span class="tag">dry-run</span>
+          <span class="tag">undo</span>
+        </div>
+        <div class="facts">
+          <span><b>15</b> 个测试通过</span>
+          <span>默认不落盘，误操作可撤销</span>
+          <span>图片 / 文本编码双支持</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>数据看板生成器</h3>
+        <a class="repo" href="https://github.com/yuyexiang143/dashboard-gen" target="_blank" rel="noopener">yuyexiang143 / dashboard-gen</a>
+        <p>
+          给一份 CSV 或 Excel，生成<strong>一个单独的 HTML 文件</strong>——KPI 卡片、趋势折线、分布图、
+          可搜索可排序的明细表全在里面。不依赖服务器，不联网也能打开，直接微信发给老板就能看。
+          图表是内联生成的，没有任何外部 CDN。
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">pandas</span>
+          <span class="tag">内联 SVG</span>
+          <span class="tag">离线可用</span>
+        </div>
+        <div class="facts">
+          <span><b>11</b> 个测试通过</span>
+          <span>输出单个 <b>38KB</b> HTML</span>
+          <span>零外部依赖</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>能做什么</h2>
+    <div class="services">
+      <div class="svc">
+        <h4>表格自动化</h4>
+        <p>公式体系、透视表、跨表汇总、月度报表自动生成。让每个月重复两小时的活变成点一下。</p>
+        <span class="price">常见 300 – 1500 元</span>
+      </div>
+      <div class="svc">
+        <h4>数据清洗与整理</h4>
+        <p>格式统一、去重、补缺、异常排查、多文件合并。交付清洗后的源文件加一份处理规则说明。</p>
+        <span class="price">常见 300 – 2000 元</span>
+      </div>
+      <div class="svc">
+        <h4>批量文件处理</h4>
+        <p>批量改名、按规则归档、图片或文本格式转换、重复文件检测。</p>
+        <span class="price">常见 200 – 1000 元</span>
+      </div>
+      <div class="svc">
+        <h4>报表与看板</h4>
+        <p>把数据做成能直接发给人看的单文件网页报表，含图表和明细表。</p>
+        <span class="price">常见 500 – 3000 元</span>
+      </div>
+      <div class="svc">
+        <h4>小型脚本工具</h4>
+        <p>单机、单功能、解决一个具体痛点的脚本，带使用说明。</p>
+        <span class="price">常见 500 – 3000 元</span>
+      </div>
+      <div class="svc">
+        <h4>修 bug / 加功能</h4>
+        <p>已有 Python 脚本跑不通、报错、结果不对，或者要加一个小功能。</p>
+        <span class="price">常见 200 – 800 元</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>关于 AI 协作，我说清楚：</b>
+      我是个人开发者，写代码的过程中会用 AI 辅助——这在今天很正常，跟用 IDE 补全是一个性质。
+      但每一行交付的代码我都会在本机实际跑一遍、测试通过才发给你。
+      <b>你问起来，我如实回答，不编造团队和履历。</b>
+      作品集里三个项目都可以直接克隆验证，跑不跑得起来，你自己试最快。
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>不接的活</h2>
+    <p style="color:var(--muted);font-size:15px;max-width:640px">
+      爬虫抓取他人数据、破解软件或接口、外挂与抢购脚本、代写论文作业、
+      刷量刷评、代实名认证、伪造数据凭证。
+      这些不是价格问题，是我不做。
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>联系</h2>
+    <p style="color:var(--muted);font-size:15px;max-width:600px">
+      有需求可以直接在 GitHub 上开 issue，或者通过下面的方式联系。
+      描述一下你要解决的问题、现在的做法、大概的数据量，我会给一个明确报价和工期。
+    </p>
+    <div class="contact">
+      <a class="btn" href="https://github.com/yuyexiang143" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn ghost" href="https://github.com/yuyexiang143?tab=repositories" target="_blank" rel="noopener">全部仓库</a>
+    </div>
+    <p class="fineprint">
+      © <span id="y"></span> · 个人开发者 · 所有项目均为开源，可自行验证
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
